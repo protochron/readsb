@@ -7,7 +7,7 @@ RUN git clone https://github.com/Mictronics/readsb.git && cd readsb && \
 
 FROM debian:buster-slim
 RUN apt update && apt install -y \
-      librtlsdr0 libncurses6 libxml2 libusb-1.0.0 bc jq && \
+      librtlsdr0 libncurses6 libxml2 libusb-1.0.0 bc jq dumb-init && \
       rm -rf /var/lib/apt/lists/*
 
 COPY --from=build /readsb/readsb /readsb/viewadsb /usr/local/bin/

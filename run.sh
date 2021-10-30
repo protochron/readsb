@@ -1,4 +1,5 @@
-#!/bin/bash -e
+#!/usr/bin/dumb-init /bin/bash
+set -e
 
 out_dir="/var/run/readsb"
 mkdir -p $out_dir
